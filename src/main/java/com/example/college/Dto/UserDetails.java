@@ -1,5 +1,6 @@
 package com.example.college.Dto;
 
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,13 +11,12 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
-public class StudentDetails {
+public class UserDetails {
 
     private int id;
     private String name;
     private String age;
 
 
+
 }
-
-
