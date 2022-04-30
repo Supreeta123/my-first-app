@@ -1,18 +1,35 @@
 package com.example.college.Services;
 
 
-import com.example.college.Dto.StudentDetails;
-import com.example.college.Dto.UserDetails;
+import com.example.college.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component
 public interface TestService {
 
-    String fetchProductDetails(String productName);
 
-    String registerStudent(StudentDetails studentDetails);
+//    ProductDetails getProductDetails(int tatoId);
 
-     UserDetails getUserDetails(int userDetails);
+//    ProductDetails getProductDetails(int tatoId);
+
+//
+
+    //    public ReviewResponse getReviewResponse(int tatoId) {
+//
 
 
+    //    public ReviewResponse getReviewResponse(int tatoId) {
+//
+    User getUserDetails(String userName, int userId);
+
+
+//    ProductDetails registerStudent(ProductDetails productDetails);
+
+    //
+//    @Override
+//    public ProductDetails  ProductNewDetails(ProductDetails productDetails) {
+//
+//    }
+//    String ProductNewDetails(ProductDetails productDetails);
+//}
 }

@@ -9,13 +9,11 @@ import lombok.ToString;
     @Setter
     @EqualsAndHashCode
     @ToString
-    public class StudentDetailss {
+    public class ReviewResponse {
 
-        private String FirstName;
-        private String lastName;
-        private String branch;
-        private String mobileNumber;
+
+        private String reviewerName;
+        private String review;
+        private String rating;
 
     }
-
-

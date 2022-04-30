@@ -1,82 +1,84 @@
 package com.example.college.ServiceImpl;
 
 
-import com.example.college.Dto.StudentDetails;
-import com.example.college.Dto.UserDetails;
 import com.example.college.Services.TestService;
 import com.example.college.entity.User;
 import com.example.college.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class TestServiceImpl<user> implements TestService {
+
 
     @Autowired
     private UserDAO userDAO;
 
-
-    @Override
-    public String fetchProductDetails(String productName) {
-        if (productName != null) {
-            switch (productName) {
-                case "Apple":
-                    return " Apple is best camera";
-                case "Sumsang":
-                    return "Sumsang is best camera";
-                default:
-                    return " No Products Found";
-
-            }
-        } else {
-            return "productName connot be null";
-        }
-    }
+//    @Override
+//    public ProductDetails getProductDetails(int tatoId) {
+//        Optional<Tato> tato = productDAO.findById(tatoId);
+//
+//      Tato tato1 = tato.get();
+//    ProductDetails productDetails = new ProductDetails();
+//
+//    productDetails.setId(tato1.getId());
+//    productDetails.setName(tato1.getName());
+//    productDetails.setType(tato1.getType());
+//    productDetails.setPrice(tato1.getPrice());
+//    productDetails.setDetails(tato1.getDetails());
+//    return productDetails;
+//    }
 
 //    @Override
-//    public String registerStudent(StudentDetails studentDetails) {
+//    public ReviewResponse getReviewResponse(int tatoId) {
+//        List<ReviewResponse> reviewResponsesList= new ArrayList<>();
 //
-//        return null;
+//        ReviewResponse reviewResponse = new ReviewResponse();
+//
+//        reviewResponse.setReviewerName("best");
+//        reviewResponse.setReview("jaan");
+//        reviewResponse.setRating("5");
+//
+//
+//        reviewResponse.setReviewerName("banu");
+//        reviewResponse.setReview("mazza");
+//        reviewResponse.setRating("54");
+//
+//
+//        reviewResponsesList.add(reviewResponse);
+//        reviewResponsesList.add(reviewResponse);
+//        return reviewResponse;
 //    }
 
 
+
+    //    public ReviewResponse getReviewResponse(int tatoId) {
+//
     @Override
-    public String registerStudent(StudentDetails studentDetails) {
+    public User getUserDetails(String userName, int userId) {
 
         User user = new User();
-        user.setName(studentDetails.getName());
-        user.setAge(studentDetails.getAge());
-        userDAO.save(user);
-        return "User saved successfully";
-    }
-//
-//        @Override
-//    public UserDetails getUserDetails(int userDetails) {
-//        return null;
-//    }
-//
 
+        User userDetails = userDAO.findByNameAndId(userName,userId);
 
-    @Override
-    public UserDetails getUserDetails(int UserId) {
+//        User userDetails1 = new User();
 
-        Optional<User> user = userDAO.findById(UserId);
-        User user1 = user.get();
-        UserDetails userDetails = new UserDetails();
-        userDetails.setName(user1.getName());
-        userDetails.setAge(user1.getAge());
-//    userDAO.save(userDetails);
-        userDetails.setId(userDetails.getId());
+       user.setId(userDetails.getId());
+        user.setName(userDetails.getName());
+        user.setAge(userDetails.getAge());
 
-        return userDetails;
-
+        return user;
 
     }
-
 }
 
 
 
 
+
+
+//    List<ReviewResponse> reviewResponsesList= new ArrayList<>();
+//        reviewResponse.setReviewerName("anu");
+//                reviewResponse.setReviewerName("best");
+//                reviewResponse.setRating("5");
+//                reviewResponsesList.add(reviewResponse);

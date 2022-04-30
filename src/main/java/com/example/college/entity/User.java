@@ -2,16 +2,19 @@ package com.example.college.entity;
 
 
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
-@Entity
 @Setter
 @Getter
 @ToString
+@EqualsAndHashCode
+@Entity
+
 @Table(name= "user")
 public class User {
 
