@@ -12,20 +12,17 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-   @PostMapping("post-student-Details")
+    @PostMapping("post-student-Details")
     public String myFirstMethod(@RequestBody StudentDetails studentDetails) {
         return studentService.fetchStudentDetails(studentDetails);
 
     }
 
+    @PutMapping("fetch-studentDetails/{studentName}")
+    public String myFirstMethod(@RequestBody String studentName) {
 
+        String result = StudentService.putStudentDetails(studentName);
+        return result;
+    }
 }
-
-//    @PutMapping("fetch-studentDetails/{studentName}")
-//    public String myFirstMethod(@PathVariable String studentName) {
-//
-//        String result = StudentService.putStudentDetails(studentName);
-//        return result;
-//    }
-
 
