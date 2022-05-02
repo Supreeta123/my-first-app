@@ -13,8 +13,8 @@ import javax.persistence.*;
 @EqualsAndHashCode
 @ToString
 @Entity
-@Table(name="tato")
-public class Tato {
+@Table(name= "user")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,13 +24,14 @@ public class Tato {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "type")
-    private String type;
+    @Column(name = "roll")
+    private String roll;
 
-    @Column(name = "price")
-    private String price;
+    @Column(name = "phone")
+    private String phone;
 
-    @Column(name = "details")
-    private String details;
+    @Column(name = "address")
+    private String address;
+
 
 }
