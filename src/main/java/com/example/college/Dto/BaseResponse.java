@@ -6,15 +6,13 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.http.HttpStatus;
 
-@Setter
 @Getter
+@Setter
 @ToString
 public class BaseResponse {
 
-    private String message;        // messege required
-    private HttpStatus httpStatus; // not found
-    private int httpStatusCode;    //ok
+    private String message;
+    private HttpStatus httpStatus;
+    private int httpStatusCode;
     private Object response;
-
-
 }
